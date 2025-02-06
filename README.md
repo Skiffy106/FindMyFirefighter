@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a project to help connect families and friends to firefighters. Firefighters can be gone for weeks at a time. This app allows users to follow allong with firefighters as they fight fires. 
+
+This project was built with [Next.js](https://nextjs.org), TailwindCSS and SQLite.
 
 ## Getting Started
 
-First, run the development server:
+After you clone this repository. Make sure you have [NodeJS](https://nodejs.org/en) installed.
+
+Then install the necessary packages:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then start the local development server
+```bash
+npm run dev
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) to see the site.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+You can start editing the page by modifying `src/app/page.tsx`. There is hot realoading so when you save it auto updates.
+
+This project uses [Vercel](https://vercel.com) as a hosting provider.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about Next.js, TailwindCSS and SQLite take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [TailwindCSS](https://tailwindcss.com/) - The best CSS solution!
+- [SQLite](https://www.sqlite.org/) - The most popular SQL database.
+- [SQLite3 TypeScript](https://nodejs.org/api/sqlite.html) - The SQL + TypeScript bindings for this project
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Live Deployment
 
-## Deploy on Vercel
+This site is live at [find-my-firefighter.vercel.app](https://find-my-firefighter.vercel.app/)!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
