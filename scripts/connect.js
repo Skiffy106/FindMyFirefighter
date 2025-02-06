@@ -3,7 +3,7 @@ const fs = require("fs");
 const csv = require("csv-parser");
 
 const db = new sqlite3.Database(
-    "./collection.db",
+    "./firefighters.db",
     sqlite3.OPEN_READWRITE | sqlite3.OPEN_CREATE,
     (err) => {
         if (err) {
@@ -36,7 +36,7 @@ function parseData(rawData) {
 
 db.serialize(() => {
     db.run(
-        "CREATE TABLE IF NOT EXISTS collection (forest TEXT, unitType TEXT, unitNumber TEXT)"
+        "CREATE TABLE IF NOT EXISTS firefighters (forest TEXT, unit_type TEXT, name TEXT)"
     );
     const results = [];
 
@@ -48,7 +48,7 @@ db.serialize(() => {
             results.push({ forest, unitType, unitNumber });
         })
         .on("end", () => {
-            const stmt = db.prepare("INSERT INTO collection (forest, unitType, unitNumber) VALUES (?, ?, ?)");
+            const stmt = db.prepare("INSERT INTO firefighters (forest, unit_type, name) VALUES (?, ?, ?)");
             results.forEach((row) => {
                 stmt.run(row.forest, row.unitType, row.unitNumber);
             });

@@ -16,7 +16,7 @@ export interface dbItem {
 }
 
 export interface FormData {
-    RequestType: string,
+    RequestType: FormRequestType,
     forest?: string,
     unitType?: string,
     unitNumber?: string,
